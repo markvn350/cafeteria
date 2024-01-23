@@ -1,0 +1,102 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+@import "../../../shared/styles/contentStyles";
+
+.contenido-proceso{
+
+    .proceso-cafe{
+        .imagen-proceso{
+            align-content: center;
+            img{
+                width: 100%;
+                object-fit: cover;
+                max-height: max-content;
+            }
+        }
+        h3{
+            font-size: 1.6rem;
+            color: v.$primario;
+            text-transform: uppercase;
+            text-align: left;
+            &::after{
+                content: "";
+                display: block;
+                width: 40%;
+                height: 5px;
+                background-color: v.$secundario;
+            }
+        }
+        p{
+            margin-bottom: 1rem;
+           
+        }
+    }
+
+
+    @include m.tablet{
+        .proceso-cafe{
+            @include m.grid(2, 2rem);
+            align-items: center;
+            p{
+                margin: 0;
+               
+            }
+        }
+        .proceso-cafe:nth-child(1){
+            .imagen-proceso{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                
+            }
+            .texto-proceso{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                
+            }
+        }
+        .proceso-cafe:nth-child(2){
+            .imagen-proceso{
+                grid-column: 2/3;
+                grid-row: 1/2;
+               
+            }
+            .texto-proceso{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+        }
+        .proceso-cafe:nth-child(3){
+            .imagen-proceso{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                
+            }
+            .texto-proceso{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+        }
+        .proceso-cafe:nth-child(4){
+            .imagen-proceso{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                
+            }
+            .texto-proceso{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+        }
+        .proceso-cafe:nth-child(5){
+            .imagen-proceso{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                
+            }
+            .texto-proceso{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+
+@import "../../../shared/styles/headerStyles";
+
+.header-menu{
+    background-image: url("../../../../assets/img/header_menu.jpg");
+}

@@ -1,0 +1,80 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+
+
+.contenido-principal{
+    background-color: v.$blanco;
+    padding: 3rem 1.4rem;
+    line-height: 1.75;
+    padding-bottom: 0.5rem;
+   @include m.tablet{
+        padding-top: 3rem;
+        margin-top: -7.5rem;
+        position: relative;
+   }
+
+   .contenido-nosotros{
+    
+        @include m.tablet{
+            display: grid;
+            grid-template-rows: unset;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+   }
+   .contenido{
+    h2{
+        &::after{
+            content: "";
+            display: block;
+            width: 6.5rem;
+            height: 6.5rem;
+            background-image: url("../../../../assets/img/cafe.svg");
+            background-repeat: no-repeat;
+
+            margin: 0 auto;
+        }
+    }
+   }
+   
+   h2{
+        color: v.$primario;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        margin-bottom: 2rem;
+
+       
+
+        span{
+            color: v.$secundario;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            font-size: 0.8rem;
+       }
+
+      
+       
+   }
+
+   .imagen-nosotros{
+        
+    img{
+        max-height: max-content;
+        width: 100%;
+        object-fit: contain;
+        padding: 1rem;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        transform: rotate(-6deg);
+    }
+}
+
+.texto-nosotros{
+    blockquote{
+        margin: 0%;
+        padding: 0.75rem;
+        border-left: 5px v.$primario solid;
+    }
+}
+}

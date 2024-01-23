@@ -1,0 +1,68 @@
+@use "../../../../mixsin.scss" as m;
+@use "../../../../variables.scss" as v;
+
+.nuestros-testimoniales{
+    background-color: v.$blanco;
+    padding: 6rem 1.5rem ;   
+  
+    h2{
+        &::after{
+            content: "";
+            display: block;
+            width: 6.5rem;
+            height: 6.5rem;
+            background-image: url("../../../../assets/img/cafe.svg");
+            background-repeat: no-repeat;
+
+            margin: 0 auto;
+        }
+    }
+    h2{
+        color: v.$primario;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        margin-bottom: 2rem;
+
+       
+
+        span{
+            color: v.$secundario;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            font-size: 0.8rem;
+       }
+    }
+    .testimonial{
+        background-color: v.$cafeClaro;
+        padding: 1.5rem;
+        border-radius: 0.7rem;
+        line-height: 1.5;
+        .autor{
+            text-align: right;
+            color: v.$primario;
+            font-size: 1.3rem;
+        }
+    } 
+    
+    @include m.tablet{
+        padding: 5rem;   
+        .testimonial{
+            margin: 0 auto;
+            width: 80%;
+            padding: 2rem 3.5rem;
+            
+            
+        } 
+    }
+
+    @include m.desktop{
+        padding: 5rem;   
+        .testimonial{
+            margin: 0 auto;
+            width: 55%;
+            
+        } 
+    }
+}

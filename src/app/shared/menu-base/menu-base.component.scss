@@ -1,0 +1,74 @@
+@use "../../../mixsin.scss" as m;
+@use "../../../variables.scss" as v;
+
+.menu{
+    background-image: url("../../../assets/img/menu_arriba.svg"), url("../../../assets/img/menu_abajo.svg") , linear-gradient(to top, v.$primario, v.$primario);
+    background-position: center 3rem, center 100%;
+    background-repeat: no-repeat;
+    color: v.$blanco;
+    padding: 8rem 1rem 8rem 1rem;
+    margin-top: -3rem;
+    @include m.tablet {
+        background-size: 100%;
+        padding: 7rem 0rem 7rem 0rem;
+    }
+
+    @include m.desktop {
+        background-size: 50%, 50%, 100%;
+        
+    }
+
+    h2{
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        margin-bottom: 0rem;
+        margin-top: 4rem;
+       
+
+        span{
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            font-size: 0.8rem;
+       }
+   }
+   .grid-menu{
+
+        @include m.tablet{
+            @include m.grid ( 2, 2rem);
+        }
+       
+
+        h3{
+            text-align: center;
+        }
+
+        ul{
+            padding: 0;
+
+            li{
+                list-style: none;
+                display: grid;
+                grid-template-columns: 5fr 1fr;
+                gap: 1rem;
+                align-items: center;
+                p{
+                    display: block;
+                    color: v.$cafeClaro;
+                    span{
+                        color: v.$secundario;
+                        display: block;
+                    }
+                }
+                .precio{
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                }
+                
+            }
+        }
+   }
+   
+}
+

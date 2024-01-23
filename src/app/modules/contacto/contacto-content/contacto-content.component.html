@@ -1,0 +1,47 @@
+<main class="contenedor contenido-principal">
+    <section class="contenido">
+        <h2><span>Reserva</span>tu mesa</h2>
+        <div class="contenido-contacto">
+            <div class="contacto-form">
+                <form [formGroup]="formContact" (ngSubmit)="sendLogin()">
+                    <div class="form-element">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" placeholder="Tu nombre" id="nombre" formControlName="nombre">
+                    </div>
+                    <div class="form-element">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Tu correo" id="email" formControlName="email">
+                    </div>
+                    <div class="form-element">
+                        <label for="numero">Numero personas</label>
+                        <select id="numero"  formControlName="numero" name="numero" >
+                            <option value="" disabled selected>--Seleccione--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="mas">Mas de 4</option>
+                        </select>
+                    </div>
+                   
+                    <div class="form-element" >
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" min="9:00" max="18:00" formControlName="hora">
+                    </div >                   
+                    <div class="form-element">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" formControlName="fecha">  
+                    </div>
+                    <div class="form-element">
+                        <button type="submit" value="enviar" [disabled]="formContact.invalid">Enviar</button>
+                    </div>
+                   
+                </form>
+                
+            </div>
+            <div class="imagen-contacto">
+                <img src="../../../../assets/img/granos_cafe.jpg" alt="img-nosotros">
+            </div>
+        </div>
+    </section>
+</main>

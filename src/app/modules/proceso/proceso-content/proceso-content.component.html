@@ -1,0 +1,20 @@
+<main class="contenedor contenido-principal">
+    <section class="contenido">
+        <div class="contenido-proceso">
+            <div class="proceso-cafe" *ngFor="let t of procesoContent.titulo ; index as i" >
+                <div class="imagen-proceso">
+                    <img src="../../../../assets/img/proceso_{{i+1}}.jpg" alt="img-nosotros">
+                    
+                </div>
+
+                <div class="texto-proceso">
+                    <h3>{{t}}</h3>
+                    <p>{{procesoContent.texto[i]}}</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+   
+</main>

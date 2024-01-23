@@ -1,0 +1,23 @@
+<footer class="footer">
+    <div class="contenedor footer-contenido">
+        <div class="footer-box ubicacion">
+            <h3>Ubicacion</h3>
+            <ul *ngFor="let u of ubicacion">
+                <li>{{u}}</li>
+            </ul>
+        </div> 
+        <div class="footer-box reservacion">
+            <h3>Reservacion</h3>
+            <ul *ngFor="let r of reservacion">
+                <li>{{r}}</li>
+            </ul>
+        </div> 
+        <div class="footer-box horario">
+            <h3>Horario</h3>
+            <ul *ngFor="let h of horario">
+                <li>{{h}}</li>
+            </ul>
+        </div> 
+    </div>
+    <p>Todos los derechos reservados. La cafeteria</p>
+</footer>
